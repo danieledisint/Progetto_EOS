@@ -7,7 +7,7 @@ Segui questa procedura passo-passo ogni volta che devi apportare una modifica al
 *Da fare solo la prima volta per scaricare il progetto sul tuo computer.*
 
 ```bash
-git clone <URL_DELLA_REPO_PROGETTO_EOS>
+git clone https://github.com/danieledisint/Progetto_EOS
 cd Progetto_EOS
 ````
 
@@ -19,10 +19,10 @@ cd Progetto_EOS
 
 ```bash
 # Crea un nuovo branch e spostati su di esso
-git checkout -b nome-tua-feature
+git checkout -b nome-branch
 ```
 
-> *Consiglio: usa nomi descrittivi, es. `grafica-login` o `fix-sensore`.*
+> *Consiglio: usa il tuo nome in modo da avere il tuo branch personale
 
 -----
 
@@ -54,7 +54,7 @@ git commit -m "Descrizione di cosa hai fatto"
 
 ```bash
 # La prima volta che invii un nuovo branch:
-git push -u origin nome-tua-feature
+git push -u origin nome-branch
 ```
 
 -----
@@ -67,6 +67,3 @@ git push -u origin nome-tua-feature
 4.  `git push -u origin nuova-feature` (Invia)
 
 <!-- end list -->
-
-```
-```
