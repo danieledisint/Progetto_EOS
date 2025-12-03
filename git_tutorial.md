@@ -1,5 +1,3 @@
-
-````markdown
 # 🌊 Workflow Git - Progetto_EOS
 
 Segui questa procedura passo-passo ogni volta che devi apportare una modifica al progetto.
