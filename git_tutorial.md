@@ -1,4 +1,5 @@
 
+````markdown
 # 🌊 Workflow Git - Progetto_EOS
 
 Segui questa procedura passo-passo ogni volta che devi apportare una modifica al progetto.
@@ -7,13 +8,25 @@ Segui questa procedura passo-passo ogni volta che devi apportare una modifica al
 *Da fare solo la prima volta per scaricare il progetto sul tuo computer.*
 
 ```bash
-git clone https://github.com/danieledisint/Progetto_EOS
+git clone [https://github.com/danieledisint/Progetto_EOS](https://github.com/danieledisint/Progetto_EOS)
 cd Progetto_EOS
 ````
 
 -----
 
-## 2\. Creare il tuo Branch
+## 2\. Aggiornare il progetto (Pull)
+
+**IMPORTANTE:** *Prima di iniziare a lavorare, assicurati di avere l'ultima versione del codice.*
+
+```bash
+# Torna sul ramo principale e scarica gli aggiornamenti
+git checkout main
+git pull origin main
+```
+
+-----
+
+## 3\. Creare il tuo Branch
 
 *Non lavorare mai direttamente su `main`. Crea un ramo dedicato per la tua modifica.*
 
@@ -22,11 +35,11 @@ cd Progetto_EOS
 git checkout -b nome-branch
 ```
 
-> *Consiglio: usa il tuo nome in modo da avere il tuo branch personale
+> *Consiglio: usa il tuo nome in modo da avere il tuo branch personale.*
 
 -----
 
-## 3\. Preparare le modifiche (Add)
+## 4\. Preparare le modifiche (Add)
 
 *Dopo aver modificato o creato i file, preparali per il salvataggio.*
 
@@ -37,7 +50,7 @@ git add .
 
 -----
 
-## 4\. Salvare le modifiche (Commit)
+## 5\. Salvare le modifiche (Commit)
 
 *Crea un "punto di salvataggio" nella storia del progetto.*
 
@@ -48,7 +61,7 @@ git commit -m "Descrizione di cosa hai fatto"
 
 -----
 
-## 5\. Inviare online (Push)
+## 6\. Inviare online (Push)
 
 *Carica il tuo branch sul server remoto (GitHub/GitLab).*
 
@@ -61,9 +74,13 @@ git push -u origin nome-branch
 
 ### Riepilogo veloce per chi ha fretta:
 
-1.  `git checkout -b nuova-feature` (Crea ramo)
-2.  `git add .` (Prepara file)
-3.  `git commit -m "messaggio"` (Salva)
-4.  `git push -u origin nuova-feature` (Invia)
+1.  `git pull origin main` (Aggiorna)
+2.  `git checkout -b nome-branch` (Crea ramo)
+3.  `git add .` (Prepara file)
+4.  `git commit -m "messaggio"` (Salva)
+5.  `git push -u origin nome-branch` (Invia)
 
 <!-- end list -->
+
+```
+```
