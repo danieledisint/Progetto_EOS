@@ -1,80 +1,70 @@
-# 📘 Guida Git per Progetto_EOS
 
-Questa è la guida rapida per contribuire al repository **Progetto_EOS**.
-Segui queste istruzioni per mantenere la cronologia pulita e lavorare senza conflitti.
+# 🌊 Workflow Git - Progetto_EOS
+
+Segui questa procedura passo-passo ogni volta che devi apportare una modifica al progetto.
+
+## 1. Scaricare la Repository (Clone)
+*Da fare solo la prima volta per scaricare il progetto sul tuo computer.*
+
+```bash
+git clone <URL_DELLA_REPO_PROGETTO_EOS>
+cd Progetto_EOS
+````
 
 -----
 
-## 🔄 Il Flusso di Lavoro (Workflow)
+## 2\. Creare il tuo Branch
 
-Ogni volta che devi apportare modifiche al **Progetto\_EOS**, segui rigorosamente questo ordine:
-
-### 1\. Sincronizza (PRIMA di lavorare)
-
-Scarica sempre le ultime modifiche dei colleghi per evitare conflitti.
+*Non lavorare mai direttamente su `main`. Crea un ramo dedicato per la tua modifica.*
 
 ```bash
-git pull origin main
+# Crea un nuovo branch e spostati su di esso
+git checkout -b nome-tua-feature
 ```
 
-### 2\. Lavora e Controlla
+> *Consiglio: usa nomi descrittivi, es. `grafica-login` o `fix-sensore`.*
 
-Fai le tue modifiche ai file. Poi controlla cosa hai toccato:
+-----
 
-```bash
-git status
-```
+## 3\. Preparare le modifiche (Add)
 
-### 3\. Prepara le modifiche (Stage)
-
-Aggiungi i file modificati all'area di preparazione.
+*Dopo aver modificato o creato i file, preparali per il salvataggio.*
 
 ```bash
+# Aggiunge tutti i file modificati
 git add .
 ```
 
-> *Nota: Se vedi warning su "CRLF replaced by LF", ignorali. È Git che gestisce la compatibilità Windows/Linux.*
+-----
 
-### 4\. Salva (Commit)
+## 4\. Salvare le modifiche (Commit)
 
-Crea il salvataggio locale. **Il messaggio deve essere chiaro.**
-
-```bash
-git commit -m "Descrizione breve di cosa hai fatto (es. fix driver sensore)"
-```
-
-### 5\. Invia (Push)
-
-Invia il tuo lavoro sul server (GitHub/GitLab).
+*Crea un "punto di salvataggio" nella storia del progetto.*
 
 ```bash
-git push origin main
+# Scrivi un messaggio chiaro tra virgolette
+git commit -m "Descrizione di cosa hai fatto"
 ```
 
 -----
 
-## 🌿 Lavorare su nuove funzionalità (Branch)
+## 5\. Inviare online (Push)
 
-Se devi fare una modifica grossa o sperimentale, NON lavorare direttamente su `main`.
+*Carica il tuo branch sul server remoto (GitHub/GitLab).*
 
-1.  **Crea un nuovo ramo:**
-    ```bash
-    git checkout -b nome-tua-funzionalita
-    ```
-2.  **Lavora, fai Add e Commit come sopra.**
-3.  **Invia il nuovo ramo online:**
-    ```bash
-    git push -u origin nome-tua-funzionalita
-    ```
+```bash
+# La prima volta che invii un nuovo branch:
+git push -u origin nome-tua-feature
+```
 
 -----
 
-## 🆘 Comandi di Emergenza
+### Riepilogo veloce per chi ha fretta:
 
-  * **Ho sbagliato tutto, voglio tornare all'ultimo commit pulito:**
-    `git checkout .` (Attenzione: cancella le modifiche non salvate\!)
-  * **Voglio vedere la storia dei salvataggi:**
-    `git log` (Premi `q` per uscire)
+1.  `git checkout -b nuova-feature` (Crea ramo)
+2.  `git add .` (Prepara file)
+3.  `git commit -m "messaggio"` (Salva)
+4.  `git push -u origin nuova-feature` (Invia)
 
 <!-- end list -->
 
